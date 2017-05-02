@@ -31,6 +31,8 @@ The Cortana Intelligence Suite provides advanced analytics tools through Microso
 This solution combines several Azure services to provide powerful advantages. Event Hubs collects real-time tank level data. Stream Analytics aggregates the streaming data and makes it available for visualization. Azure SQL stores and transforms the tank level data. Machine Learning implements and executes the forecasting model. Power BI visualizes the real-time tank level as well as the forecast results. Finally, Data Factory orchestrates and schedules the entire data flow.
 
 The 'Deploy' button will launch a workflow that will deploy an instance of the solution within a Resource Group in the Azure subscription you specify. The solution includes multiple Azure services (described below) along with a web job that simulates data so that immediately after deployment you have a working end-to-end solution.
+
+After deployment, see the post deployment instructions [here](Post Deployment Instructions.md).
 </Guide>
 
 ## Solution Diagram
