@@ -1,6 +1,6 @@
 # [Oil & Gas Tank Level Forecasting Solution](https://go.microsoft.com/fwlink/?linkid=831187)
 
-This folder contains the post-deployment instructions for the deployable Tank Level Forecasting solution in the Cortana Intelligence Gallery. To start a new solution deployment, visit the gallery page [here](https://go.microsoft.com/fwlink/?linkid=831187).
+This folder contains the post-deployment instructions for the deployable Tank Level Forecasting solution in the Cortana Intelligence Gallery. To start a new solution deployment, visit the gallery page [here](https://gallery.cortanaintelligence.com/solutions).
 
 ## <a name="Summary"></a>Summary
 <Guide type="Summary">
