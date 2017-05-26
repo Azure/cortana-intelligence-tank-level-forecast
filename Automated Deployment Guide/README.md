@@ -37,7 +37,7 @@ After deployment, see the post deployment instructions [here](Post%20Deployment%
 
 ## Solution Diagram
 
-![Solution Diagram](Figures/Tank%20Architecture.PNG)
+![Solution Diagram](https://raw.githubusercontent.com/Azure/cortana-intelligence-tank-level-forecast/master/Automated%20Deployment%20Guide/Figures/Tank%20Architecture.PNG?token=AIn4kF6iayGeZ_49xop2W_9Ypq3lttDMks5ZMbhSwA%3D%3D)
 
 ## Technical details and workflow
 1.	The data feeds into the **Azure Event Hubs** and **Azure SQL** service as data points or events, that will be used in the rest of the solution flow.
