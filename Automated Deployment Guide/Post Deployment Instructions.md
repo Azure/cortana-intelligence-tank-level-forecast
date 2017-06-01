@@ -4,7 +4,7 @@ This document is focusing on the post deployment instructions for the automated 
 
 # Architecture
 
-The architecture diagram shows various Azure services that are deployed by Tank Level Forecasting Solution using [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions), and how they are connected to each other in the end to end solution.
+The architecture diagram shows various Azure services that are deployed by the Oil & Gas Tank Level Forecasting Solution using [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions), and how they are connected to each other in the end to end solution.
 
 ![Solution Diagram](Figures/Tank%20Architecture.PNG)
 
