@@ -1,4 +1,4 @@
-# Cortana Intelligence Suite Oil & Gas Tank Level Prediction Solution  
+# Cortana Intelligence Suite: Oil & Gas Tank Level Prediction Solution  
 
 # 1. Introduction
 
