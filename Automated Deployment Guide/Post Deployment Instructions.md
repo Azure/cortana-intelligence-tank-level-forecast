@@ -1,4 +1,4 @@
-# [Oil & Gas Tank Level Forecasting Solution](https://go.microsoft.com/fwlink/?linkid=831187)
+ [Oil & Gas Tank Level Forecasting Solution](https://go.microsoft.com/fwlink/?linkid=831187)
 
 This document is focusing on the post deployment instructions for the automated deployment through [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions). The source code of the solution as well as manual deployment instructions can be found [here](../Manual%20Deployment%20Guide).
 
@@ -28,7 +28,7 @@ Once the solution is deployed to the subscription, you can see the services depl
 
 ![CIS resource group link](Figures/CIS%20resource%20group.png)
 
-This will show all the resources under this resource groups on [Azure management portal](https://portal.azure.com/).
+This will show all the resources under this resource group on [Azure management portal](https://portal.azure.com/).
 
 After successful deployment, the entire solution is automatically started on cloud. You can monitor the progress from the following resources.
 
@@ -36,14 +36,14 @@ After successful deployment, the entire solution is automatically started on clo
 
 ### Azure Application Service
 
-An Azure Application service containing six web jobs is created during the deployment. You can monitor the web jobs by clicking the link on your deployment page.
-- One-time running web jobs are used to start certain Azure services.
+An Azure Application service containing six web jobs is created during the deployment. You can monitor the WebJobs by clicking the link on your final deployment screen (in CIS).
+- One-time running WebJobs are used to start certain Azure services.
   - TankWjCopyMl: Copies the ML experiment from gallery to the newly created ML workspace and publish it as ML WebService.
   - TankWjDataFactory: Starts the Azure Data Factory pipelines.
   - TankWjPrepareSQL: Creates required tables in the SQL database
   - TankWjPreseedSQL: Copies the historical tank level data to Azure SQL.
   - TankWJStartStream: Starts Azure Stream Analytics.
-- Continuous running web jobs are used as data generator.
+- Continuous running WebJobs are used as data generator.
   - TankGenerator: Simulates tank level data and sends it to Event Hub every minute.
 
 ### Azure Event Hub
@@ -70,7 +70,7 @@ Azure SQL data warehouse is used to save the Event Hub data and the forecast res
 
 ### Azure Data Factory
 
-Azure Data Factory is used to orchestrate data movement and forecasting activities. You can monitor the data pipelines by clicking the link on your deployment page. Note that it may take some time for the triggered WebJobs in the application service to complete their runs. Until then, it is normal to see errors in your Azure Data Factory pipelines.
+Azure Data Factory is used to orchestrate data movement and forecasting activities. You can monitor the data pipelines by clicking the link on your final deployment screen. Note that it may take some time for the triggered WebJobs in the application service to complete their runs. Until then, it is normal to see errors in your Azure Data Factory pipelines.
 
 ## **Visualization**
 
@@ -91,7 +91,7 @@ A single Power BI dashboard can be configured to display:
 
 ![](Figures/PBI-dashboard.PNG)
 
-1. Get the names of the resources from the deployment page.
+1. Get the names of the resources from your final deployment screen.
     - The SQL server and database names.
       - The server username and password will be the ones you chose during deployment. You may reset the password from the SQL Server's page on [Azure management portal](https://portal.azure.com/).
     - The Azure Stream Analytics Power BI job name.
