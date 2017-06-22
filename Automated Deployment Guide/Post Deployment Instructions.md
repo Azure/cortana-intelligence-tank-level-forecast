@@ -1,4 +1,4 @@
-# [Oil & Gas Tank Level Forecasting Solution](https://go.microsoft.com/fwlink/?linkid=831187)
+s# [Oil & Gas Tank Level Forecasting Solution](https://go.microsoft.com/fwlink/?linkid=831187)
 
 This document is focusing on the post deployment instructions for the automated deployment through [Cortana Intelligence Solutions](https://gallery.cortanaintelligence.com/solutions). The source code of the solution as well as manual deployment instructions can be found [here](../Manual%20Deployment%20Guide).
 
@@ -12,11 +12,11 @@ The architecture diagram shows various Azure services that are deployed by the O
 
 3.	**Azure Stream Analytics** analyze the data to provide near real-time analytics on the input stream from the event hub and directly publish to Power BI for visualization.
 
-4.	The **Azure Machine Learning** service is used to make forecast on the tank level of particular region given the inputs received.
+4.	The **Azure Machine Learning** service is used to make forecasts on the tank level of particular region given the inputs received.
 
 5.	**Azure SQL Data Warehouse** is used to store the prediction results received from the **Azure Machine Learning** service. These results are then consumed in the **Power BI** dashboard.
 
-6. **Azure Data Factory** handles orchestration, and scheduling of the hourly model retraining.
+6. **Azure Data Factory** handles orchestration and scheduling of the hourly model retraining.
 
 7.	Finally, **Power BI** is used for results visualization, so that users can monitor the tank level from a facility in real time and use the forecast level to prevent spillage.
 
@@ -36,7 +36,7 @@ After successful deployment, the entire solution is automatically started on clo
 
 ### Azure Application Service
 
-Six Azure Application services are created during the deployment. You can monitor them by clicking the link on your deployment page.
+An Azure Application service containing six web jobs is created during the deployment. You can monitor the web jobs by clicking the link on your deployment page.
 - One-time running web jobs are used to start certain Azure services.
   - TankWjCopyMl: Copies the ML experiment from gallery to the newly created ML workspace and publish it as ML WebService.
   - TankWjDataFactory: Starts the Azure Data Factory pipelines.
@@ -70,11 +70,11 @@ Azure SQL data warehouse is used to save the Event Hub data and the forecast res
 
 ### Azure Data Factory
 
-Azure Data Factory is used to orchestrate data movement and forecasting activities. You can monitor the data pipelines by clicking the link on your deployment page. Note that the application services need time to all complete their initial runs. Until then, it is normal to see errors in your Azure Data Factory pipelines.
+Azure Data Factory is used to orchestrate data movement and forecasting activities. You can monitor the data pipelines by clicking the link on your deployment page. Note that it may take some time for the triggered WebJobs in the application service to complete their runs. Until then, it is normal to see errors in your Azure Data Factory pipelines.
 
 ## **Visualization**
 
-Power BI dashboard can be used to visualize the real-time tank level data as well as the updated tank level forecast results. The following instructions will guide you to build a dashboard to visualize data from database and from real-time data stream.
+Power BI dashboard can be used to visualize the real-time tank level data as well as the updated tank level forecast results. The following instructions will guide you to build a dashboard to visualize data from database and from the real-time data stream.
 
 ### Visualize Tank Level Data from Data Warehouse
 
