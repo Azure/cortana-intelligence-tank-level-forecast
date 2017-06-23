@@ -6,7 +6,7 @@ This folder contains the post-deployment instructions for the deployable Tank Le
 <Guide type="Summary">
 Today, most facilities operate reactively to problems in tank levels. This often leads to spills, emergency shutdowns, expensive remediation costs, regulatory issues, costly repairs and fines. Tank level forecasting helps manage and abate these and other problems.
 
-Forecasts are created by harnessing the power of real-time and historical data from sensors, meters and records that is readily available.
+Forecasts are created by harnessing the power of real-time and historical data readily available from sensors, meters and records, which helps to:
 
 - Prevent tank spillage and emergency shutdowns
 - Discover hardware malfunction or failure
@@ -26,7 +26,7 @@ The Cortana Intelligence Suite is adaptable and can be customized to meet differ
 
 <Guide type="Description">
 
-The Cortana Intelligence Suite provides advanced analytics tools through Microsoft Azure — data ingestion, data storage, data processing and advanced analytics components — all of the essential elements for building an tank level forecasting solution.
+The Cortana Intelligence Suite provides advanced analytics tools through Microsoft Azure — data ingestion, data storage, data processing and advanced analytics components — all of the essential elements for building a tank level forecasting solution.
 
 This solution combines several Azure services to provide powerful advantages. Event Hubs collects real-time tank level data. Stream Analytics aggregates the streaming data and makes it available for visualization. Azure SQL stores and transforms the tank level data. Machine Learning implements and executes the forecasting model. Power BI visualizes the real-time tank level as well as the forecast results. Finally, Data Factory orchestrates and schedules the entire data flow.
 
