@@ -4,7 +4,7 @@ This folder contains the post-deployment instructions for the deployable Tank Le
 
 ## <a name="Summary"></a>Summary
 <Guide type="Summary">
-Today, most facilities operate reactively to problems in tank levels. This often leads to spills, emergency shutdowns, expensive remediation costs, regulatory issues, costly repairs and fines. Tank level forecasting allows facilities to manage and abate these and other problems.
+Today, most facilities operate reactively to problems in tank levels. This often leads to spills, emergency shutdowns, expensive remediation costs, regulatory issues, costly repairs and fines. Tank level forecasting helps manage and abate these and other problems.
 
 Forecasts are created by harnessing the power of real-time and historical data from sensors, meters and records that is readily available.
 
