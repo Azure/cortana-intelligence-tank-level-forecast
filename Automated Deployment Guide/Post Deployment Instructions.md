@@ -132,7 +132,7 @@ A single Power BI dashboard can be configured to display:
     - Click ***Apply***.
 
 4. Visualizing the forecast output and sensor values.
-    - Download and open the TankLevelForecast.pbix report file.
+    - Download and open the [TankLevelForecast.pbix](https://github.com/Azure/cortana-intelligence-tank-level-forecast/tree/master/Automated%20Deployment%20Guide/Power%20BI) report file.
       - The report visuals will display errors until the connection is made to the SQL Data Warehouse.
     - Click ***Get Data***.
     - Select **Azure**, choose ***Azure SQL Data Warehouse*** and click ***Connect***.
