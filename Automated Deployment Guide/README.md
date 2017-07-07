@@ -2,6 +2,8 @@
 
 This folder contains the post-deployment instructions for the deployable Tank Level Forecasting solution in the Cortana Intelligence Gallery. To start a new solution deployment, visit the gallery page [here](https://gallery.cortanaintelligence.com/solutions).
 
+<Guide type="PostDeploymentGuidance" url="https://github.com/Azure/cortana-intelligence-tank-level-forecast/blob/master/Automated%20Deployment%20Guide/Post%20Deployment%20Instructions.md"/>
+
 ## <a name="Summary"></a>Summary
 <Guide type="Summary">
 Today, most facilities operate reactively to problems in tank levels. This often leads to spills, emergency shutdowns, expensive remediation costs, regulatory issues, costly repairs and fines. Tank level forecasting helps manage and abate these and other problems.
@@ -23,9 +25,7 @@ The Cortana Intelligence Suite is adaptable and can be customized to meet differ
 ## <a name="Description"></a>Description
 
 #### Estimated Provisioning Time: <Guide type="EstimatedTime">20 Minutes</Guide>
-
 <Guide type="Description">
-
 The Cortana Intelligence Suite provides advanced analytics tools through Microsoft Azure — data ingestion, data storage, data processing and advanced analytics components — all of the essential elements for building a tank level forecasting solution.
 
 This solution combines several Azure services to provide powerful advantages. Event Hubs collects real-time tank level data. Stream Analytics aggregates the streaming data and makes it available for visualization. Azure SQL stores and transforms the tank level data. Machine Learning implements and executes the forecasting model. Power BI visualizes the real-time tank level as well as the forecast results. Finally, Data Factory orchestrates and schedules the entire data flow.
@@ -33,7 +33,7 @@ This solution combines several Azure services to provide powerful advantages. Ev
 The 'Deploy' button will launch a workflow that will deploy an instance of the solution within a Resource Group in the Azure subscription you specify. The solution includes multiple Azure services (described below) along with a web job that simulates data so that immediately after deployment you have a working end-to-end solution.
 
 After deployment, see the post deployment instructions [here](Post%20Deployment%20Instructions.md).
-</Guide>
+
 
 ## Solution Diagram
 
