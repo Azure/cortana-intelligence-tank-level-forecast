@@ -8,7 +8,7 @@ The architecture diagram shows various Azure services that are deployed by the O
 
 ![Solution Diagram](Figures/Tank%20Architecture.PNG)
 
-1.	The data feeds into the **Azure Event Hubs** and **Azure SQL** service as data points or events, that will be used in the rest of the solution flow.
+1.	The data feeds into the **Azure Event Hubs** and **Azure SQL Data Warehouse** service as data points or events, that will be used in the rest of the solution flow.
 
 3.	**Azure Stream Analytics** analyze the data to provide near real-time analytics on the input stream from the event hub and directly publish to Power BI for visualization.
 
@@ -40,8 +40,8 @@ An Azure Application service containing six web jobs is created during the deplo
 - One-time running WebJobs are used to start certain Azure services.
   - TankWjCopyMl: Copies the ML experiment from gallery to the newly created ML workspace and publish it as ML WebService.
   - TankWjDataFactory: Starts the Azure Data Factory pipelines.
-  - TankWjPrepareSQL: Creates required tables in the SQL database
-  - TankWjPreseedSQL: Copies the historical tank level data to Azure SQL.
+  - TankWjPrepareSQL: Creates required tables in the SQL database.
+  - TankWjPreseedSQL: Copies the historical tank level data to Azure SQL Data Warehouse.
   - TankWJStartStream: Starts Azure Stream Analytics.
 - Continuous running WebJobs are used as data generator.
   - TankGenerator: Simulates tank level data and sends it to Event Hub every minute.
@@ -64,9 +64,9 @@ The Azure Machine Learning Studio workspace contains the predictive experiment u
 
 The Azure Storage account is used by Azure Machine Learning Studio to hold training data, test execution of the machine learning model, and the trained models themselves.
 
-### Azure SQL Server/SQL Data Warehouse
+### Azure SQL Server/Azure SQL Data Warehouse
 
-Azure SQL data warehouse is used to save the Event Hub data and the forecast results. You can use the SQL server and database names shown on the deployment page with the username and password that you set up in the beginning of your deployment to log in your database and look at the results.
+Azure SQL Data Warehouse is used to save the Event Hub data and the forecast results. You can use the SQL server and database names shown on the deployment page with the username and password that you set up in the beginning of your deployment to log in your database and look at the results.
 
 ### Azure Data Factory
 
@@ -78,15 +78,15 @@ Power BI dashboard can be used to visualize the real-time tank level data as wel
 
 ### Visualize Tank Level Data from Data Warehouse
 
-The essential goal of this part is to get the tank level forecast of each region and visualize it. Power BI can directly connect to an Azure SQL data warehouse as its data source, where the prediction results are stored.
+The essential goal of this part is to get the tank level forecast of each region and visualize it. Power BI can directly connect to an Azure SQL Data Warehouse as its data source, where the prediction results are stored.
 
 > Notes:
 > 1) In this step, the prerequisite is to download and install the free software [Power BI desktop](https://powerbi.microsoft.com/desktop).
 > 2) We recommend you initiate this process as soon as the solution has deployed, as it will take 2-3 hours to gather enough data points to visualize.
 
 A single Power BI dashboard can be configured to display:
-- the forecast output from the Azure Machine Learning web service stored in the SQL Data Warehouse,
-- the tank sensor data stored in the SQL Data Warehouse, used as input to the machine learning model, and
+- the forecast output from the Azure Machine Learning web service stored in the Azure SQL Data Warehouse,
+- the tank sensor data stored in the Azure SQL Data Warehouse, used as input to the machine learning model, and
 - the live streaming output of tank sensor data flowing from Azure Stream Analytics.
 
 ![](Figures/PBI-dashboard.PNG)
@@ -133,10 +133,10 @@ A single Power BI dashboard can be configured to display:
 
 4. Visualizing the forecast output and sensor values.
     - Download and open the [TankLevelForecast.pbix](https://github.com/Azure/cortana-intelligence-tank-level-forecast/tree/master/Automated%20Deployment%20Guide/Power%20BI) report file.
-      - The report visuals will display errors until the connection is made to the SQL Data Warehouse.
+      - The report visuals will display errors until the connection is made to the Azure SQL Data Warehouse.
     - Click ***Get Data***.
     - Select **Azure**, choose ***Azure SQL Data Warehouse*** and click ***Connect***.
-    - Enter the server name and database name of the SQL Data Warehouse you collected at step 1.
+    - Enter the server name and database name of the Azure SQL Data Warehouse you collected at step 1.
     - Choose DirectQuery and click ***OK***.
       - If a SQL Server Database credentials window pops up, select the ***Database*** tab and enter the server username and password you chose during deployment.
       - Click ***Connect***.
